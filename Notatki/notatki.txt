@@ -1,0 +1,6 @@
+/////////////////////////////////////////////////////////
+    var && let && const
+        const a = 10;  NIE DA SIE NADPISAC ale mozna dopisac
+        let - lokalne w danym bloku
+        var - widac wszedzie
+/////////////////////////////////////////////////////////
