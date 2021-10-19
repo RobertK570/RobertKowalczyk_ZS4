@@ -12,13 +12,16 @@
 
     const km = prompt('Podaj ilosc km: ');
     const zl = prompt('Podaj cene paliwa: ');
-    const ileNa100Km = prompt('Podaj cene paliwa: ');
+    const ileNa100Km = prompt('Podaj ile pali na 100km: ');
 
-    document.write(`<div> </div>`)
-        //TODO
+        const zuzytePaliwo = ((km * ileNa100Km ) / 100);
+        const wynik = zuzytePaliwo * zl;
 
-    // na 100km ileNa100Km * zl = cena za 100km
-
+            document.write(`<div> Przejechano km :  ${km}</div>`);
+            document.write(`<div> Cena paliwa:  ${zl}</div>`);
+            document.write(`<div> Srednie spalanie:  ${ileNa100Km}</div>`);
+            document.write(`<div> Zuzyte paliwo:  ${zuzytePaliwo}</div>`);
+            document.write(`<div> Cena za paliwo:  ${wynik}</div>`);
 
 </script>
 
