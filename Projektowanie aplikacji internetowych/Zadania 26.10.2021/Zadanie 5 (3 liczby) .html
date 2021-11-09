@@ -1,0 +1,59 @@
+//TODO
+//TRZEBA DOKONCZYC
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="">
+        <input type="text" name="pole1" placeholder="1 liczba">
+        <input type="text" name="pole2" placeholder="2 liczba">
+        <input type="text" name="pole3" placeholder="3 liczba">
+        <button type="submit">Pokaż </button>
+        </form>
+
+        <div class="wynik">
+            To sie zamieni na wynik
+        </div>
+
+        <script> 
+            const formularz = document.querySelector('form');
+            const wynik=document.querySelector('.wynik');
+
+            formularz.addEventListener('submit', (e) => {
+            e.preventDefault();
+                const a = document.querySelector('input[name=pole1]').value;
+                const b = document.querySelector('input[name=pole2]').value;
+                const c = document.querySelector('input[name=pole3]').value;
+
+                /*if(a<b){
+                    if(b<c)
+                    {
+                       wynik.textContent = `${a} , ${b} , ${c}`;
+                    }
+                    else if(b>c)
+                    {
+                        wynik.textContent = `${c} , ${a} , ${b}`; 
+                    }
+                }
+                else if(a>b){
+                    if(b<c)
+                    {
+                        wynik.textContent = `${b} , ${c} , ${a}`; 
+                    }
+                    else if(b>c)
+                    {
+                        wynik.textContent = `${c} , ${b} , ${a}`; 
+                    }
+                }*/
+
+    });
+        </script>
+</body>
+</html>
