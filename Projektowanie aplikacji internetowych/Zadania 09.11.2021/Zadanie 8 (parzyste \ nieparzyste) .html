@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NWD</title>
+</head>
+<body>
+    <form action="" method="POST">
+        <input type="number" name="liczba1" placeholder="Koniec przedziału">
+        <input type="submit" value="Oblicz">
+    </form>
+
+    <div class="wynik"></div>
+    
+    <script>
+
+        const form = document.querySelector('form');
+        const div = document.querySelector('div');
+        let parzysta = 0;
+        let nieparzysta = 0;
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const liczba1 = parseInt(document.querySelector('input[name = liczba1]').value);
+            
+            for(let i = 1; i <= liczba1; i++)
+            {
+                if(i%2 == 0){
+                    parzysta++;
+                }
+                else{
+                    nieparzysta++;
+                }
+            }
+            div.textContent = `Ilość parzystych: ${parzysta} , ilość nieparzystych ${nieparzysta}`;
+                parzysta = 0;
+                nieparzysta = 0;
+        }); 
+
+    </script>
+</body>
+</html>
