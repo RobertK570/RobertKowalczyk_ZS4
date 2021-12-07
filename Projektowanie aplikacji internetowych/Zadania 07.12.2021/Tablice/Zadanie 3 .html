@@ -7,16 +7,35 @@
     <title>Zadanie 1</title>
 </head>
 <body>
+    <div class="tablica"></div>
+    <div class="suma"></div>
+    <div class="ileZer"></div>
     
     <script>
-        
+        const divTablica = document.querySelector('.tablica');
+        const divSuma = document.querySelector('.suma');
+        const divIleZer = document.querySelector('.ileZer');
+
        const liczby = [];
+       let suma = 0; 
+       let ileZer = 0;
 
        for(let i = 0 ; i < 100 ; i++){
-           liczby[i] = Math.round(Math.random() * 100);
+            liczby[i] = Math.round(Math.random() * 100);
+            suma += liczby[i];
        }
 
-       document.write(liczby.join(', '));
+       for (const liczba of liczby){
+           if (liczba==0) {
+            ileZer++;
+           }
+       }
+
+       divTablica.textContent = (liczby.join(', '));
+       divSuma.textContent = `Suma wynosi: ${suma}`;
+       divIleZer.textContent = `Ilość zer: ${ileZer}`;
+       
+      
 
     </script>
 
