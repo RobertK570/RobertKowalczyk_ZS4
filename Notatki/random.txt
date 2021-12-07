@@ -1,0 +1,3 @@
+Random losuje liczby z zakresu 0  - 1
+Math.random();
+
