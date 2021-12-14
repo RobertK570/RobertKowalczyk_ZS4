@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        <input type="number" name="liczba1" id="" placeholder="Liczba 1">
+        <input type="number" name="liczba2" id="" placeholder="Liczba 2">
+        <input type="submit" value="LICZ">
+    </form>
+
+    <div class="wynik1"></div>
+    <div class="wynik2"></div>
+    <div class="wynik3"></div>
+    <div class="wynik4"></div>
+
+
+<script>
+    const form = document.querySelector('form');
+    const div1 = document.querySelector('.wynik1');
+    const div2 = document.querySelector('.wynik2');
+    const div3 = document.querySelector('.wynik3');
+    const div4 = document.querySelector('.wynik4');
+
+
+    form.addEventListener('submit', (e) =>{
+        e.preventDefault();
+
+        const l1 = parseInt(document.querySelector('input[name="liczba1"]').value);
+        const l2 = parseInt(document.querySelector('input[name="liczba2"]').value);
+        
+        div1.textContent = `Dodawanie ${l1} + ${l2} = ${l1+l2}`;
+        div2.textContent = `Odejmowanie ${l1} - ${l2} = ${l1-l2}`;
+        div3.textContent = `Mnożenie ${l1} * ${l2} = ${l1*l2}`;
+
+        if(l2 == 0){
+        div4.textContent = "NIE DA SIE PODZIELIC PRZEZ 0 // Operacja anulowana";
+        }
+        else{
+            div4.textContent = `Dodawanie ${l1} / ${l2} = ${l1/l2}`;
+        }
+    });
+</script>
+
+</body>
+</html>
