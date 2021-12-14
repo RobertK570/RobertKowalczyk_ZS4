@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        <input type="number" name="liczba1" id="" placeholder="1">
+        <input type="number" name="liczba2" id="" placeholder="2">
+        <input type="number" name="liczba3" id="" placeholder="3">
+        <br>
+        <input type="range" min="0" max="1" name="option"> 
+        <p>Lewo = Obwód | Prawo = Pole</p>
+        <input type="submit" value="LICZ">
+    </form>
+
+    <div class="wynik1"></div>
+
+<script>
+    const form = document.querySelector('form');
+    const div1 = document.querySelector('.wynik1');
+    
+    form.addEventListener('submit', (e) =>{
+        e.preventDefault();
+
+        const l1 = parseInt(document.querySelector('input[name="liczba1"]').value);
+        const l2 = parseInt(document.querySelector('input[name="liczba2"]').value);
+        const l3 = parseInt(document.querySelector('input[name="liczba3"]').value);
+
+        const option = parseInt(document.querySelector('input[name="option"]').value);
+        const obw = l1 + l2 + l3;
+        const p = obw/2;
+
+        if(option == 1){
+            div1.textContent = `Wybrałeś POLE: ${Math.sqrt(p * (p-l1) * (p-l2) * (p - l3))}`;
+            //wzor herona XD i tak dziala (ale nie moga byc za wielkie cyferki)
+        }
+        else if(option == 0){
+            div1.textContent = `Wybrałeś OBW: ${obw}`;
+        }
+        
+    });
+</script>
+
+</body>
+</html>
