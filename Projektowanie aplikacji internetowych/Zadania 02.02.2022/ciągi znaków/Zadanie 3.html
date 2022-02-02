@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" name="zdanie">
+    <button>Licz</button>
+    <div></div>
+
+    <script>
+        function oblicz(wyraz) {
+            const wyrazTab = wyraz.split(" ");
+            return `Ilość wyrazów wynosi ${wyrazTab.length}`;
+        }
+
+        const btn = document.querySelector('button');
+        const div = document.querySelector('div');
+
+        btn.addEventListener('click', () =>{
+            const wyrazTmp = document.querySelector('input').value;
+            div.textContent = oblicz(wyrazTmp);
+        })
+
+    </script>
+</body>
+</html>
