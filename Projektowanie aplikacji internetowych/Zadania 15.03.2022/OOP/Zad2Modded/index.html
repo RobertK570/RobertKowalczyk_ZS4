@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przykłady programowania obiektowego w JS</title>
+    <style>
+        body {
+            background-color: rgb(82, 82, 82);
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+
+    <script src="Samochod.js"> </script>
+    <script src="Komis.js"> </script>
+    <script>
+        //kod obsługi klasy samochód
+        const audi = new Samochod('Audi', 'A3', 12000, 2003, 15);
+        console.log(audi);
+        console.log(audi.wiek());
+        console.log(audi.koszt(6.98));
+
+        const kia = new Samochod('KIA', 'Ceed', 18000, 2010, 8);
+        console.log(kia);
+        console.log(kia.wiek());
+        console.log(kia.koszt(7.65));
+
+        const fordzik = new Samochod('Ford', 'Fusion', 9000, 2010, 7);
+        const miata = new Samochod('Mazda', 'Miata', 25000, 1995, 20);
+
+        const asso = new Komis('asso');
+ 
+        asso.dodajSamochod(kia);
+        asso.dodajSamochod(audi);
+        asso.dodajSamochod(fordzik);
+        asso.dodajSamochod(miata);
+
+        asso.wyswietlSamochody();
+
+
+
+    </script>
+</body>
+</html>
