@@ -7,5 +7,18 @@
     <title>Przykłady programowania obiektowego w JS</title>
 </head>
 <body>
+    <script src="Samochod.js"> </script>
+    <script>
+        //kod obsługi klasy samochód
+        const audi = new Samochod('Audi', 'A3', 12000, 2003, 15);
+        console.log(audi);
+        console.log(audi.wiek());
+        console.log(audi.koszt(6.98));
+
+        const kia = new Samochod('KIA', 'Ceed', 18000, 2010, 8);
+        console.log(kia);
+        console.log(kia.wiek());
+        console.log(kia.koszt(7.65));
+    </script>
 </body>
 </html>
