@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .naglowek{
+            color: orange;
+        }
+        .div{
+            font-size: 40px;
+            color: blue;
+        }
+        .p1{
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 class="naglowek">To jest nagłówek H1</h1>
+    <div class="div">Treść z diva</div>
+    <p class="p1">Treść akapitu 1</p>
+    <p class="p2">Treść akapitu 2</p>
+    
+    <script>
+        const h1 = document.querySelector('.naglowek');
+        const div = document.querySelector('.div');
+        const p1 = document.querySelector('.p1');
+        const p2 = document.querySelector('.p2');
+
+        p1.textContent += " Bardzo lubię się uczyć!";
+        h1.textContent = "JavaScript";
+        div.style.fontFamily = "Tahoma";
+    </script>
+
+</body>
+</html>
