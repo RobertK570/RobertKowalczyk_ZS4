@@ -7,10 +7,14 @@
     <title>Document</title>
 
     <style>
+        body{
+            background-color: gray;
+        }
         div{
             padding: 50px;
             background-color: black;
-            color: yellow;
+            color: green;
+            font-family: 'Courier New', Courier, monospace;
         }
     </style>
 </head>
@@ -20,14 +24,14 @@
     </div>
 
     <script>
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+    function getRandomIntInclusive(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
 
         const div = document.querySelector('div');
-        const colors = ['red','green','blue','orange','pink','white'];
+        const colors = ['red','yellow','blue','orange','pink','white'];
         let temp;
         
         div.addEventListener('click', function(){
@@ -37,7 +41,7 @@ function getRandomIntInclusive(min, max) {
 
         div.addEventListener('mouseover', function(){
             temp = div.textContent;
-            div.textContent = "Nowa treść";
+            div.textContent = "Witaj że fachowiec #Majster";
         });
 
         div.addEventListener('mouseleave', function(){
