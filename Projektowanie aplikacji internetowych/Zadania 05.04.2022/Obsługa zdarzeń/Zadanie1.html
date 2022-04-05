@@ -20,11 +20,30 @@
     </div>
 
     <script>
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
         const div = document.querySelector('div');
-
+        const colors = ['red','green','blue','orange','pink','white'];
+        let temp;
+        
         div.addEventListener('click', function(){
-
+            let i = getRandomIntInclusive(0,6);
+            div.style.color = colors[i];
         });
+
+        div.addEventListener('mouseover', function(){
+            temp = div.textContent;
+            div.textContent = "Nowa treść";
+        });
+
+        div.addEventListener('mouseleave', function(){
+            div.textContent = temp;
+        });
+
     </script>
 </body>
 </html>
