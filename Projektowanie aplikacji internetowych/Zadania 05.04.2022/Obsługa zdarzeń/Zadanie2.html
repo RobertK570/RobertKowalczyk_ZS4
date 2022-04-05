@@ -21,6 +21,12 @@
         <h2>
             Współrzędna Y kursora myszy: 0
         </h2>
+        <h2>
+            Naciśnięto klawisz: 
+        </h2>
+        <h2>
+            Napisany tekst: 
+        </h2>
     </div>
 
     <script>
@@ -29,6 +35,11 @@
         document.addEventListener('mousemove', function(e){
             naglowkiH2[0].textContent = "Współrzędna X kursora myszy: " + e.clientX;
             naglowkiH2[1].textContent = "Współrzędna Y kursora myszy: " + e.clientY;
+        });
+
+        document.addEventListener('keydown', function(e){
+            naglowkiH2[2].textContent = "Naciśnięto klawisz: " + e.key;
+            naglowkiH2[3].textContent +=  e.key;
         });
     </script>
 </body>
