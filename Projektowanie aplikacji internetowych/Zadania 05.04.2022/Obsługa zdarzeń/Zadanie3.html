@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(34, 34, 34);
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        p{
+            background-color: green;
+            padding: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Widać ze fachowiec
+    </p>
+
+    <script>
+       const p = document.querySelector('p');
+       let tmp = p.textContent;
+       
+       p.addEventListener('mouseover', function(){
+            p.style.backgroundColor = "red";
+            p.textContent = "ALE NIE TY!!!"
+       });
+
+       p.addEventListener('mouseleave', function(){
+            p.style.backgroundColor = "green";
+            p.textContent = tmp;
+       });
+    </script>
+</body>
+</html>
