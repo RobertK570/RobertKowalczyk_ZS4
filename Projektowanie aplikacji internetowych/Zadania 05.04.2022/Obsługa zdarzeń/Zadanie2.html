@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(34, 34, 34);
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>
+            Współrzędna X kursora myszy: 0
+        </h2>
+        <h2>
+            Współrzędna Y kursora myszy: 0
+        </h2>
+    </div>
+
+    <script>
+        const naglowkiH2 = document.querySelectorAll('h2');
+        
+        document.addEventListener('mousemove', function(e){
+            naglowkiH2[0].textContent = "Współrzędna X kursora myszy: " + e.clientX;
+            naglowkiH2[1].textContent = "Współrzędna Y kursora myszy: " + e.clientY;
+        });
+    </script>
+</body>
+</html>
