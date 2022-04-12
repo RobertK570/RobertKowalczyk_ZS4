@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: space-between;
+            width: 450px;
+        }
+        button, div, input, span{
+            font-family:'Courier New', Courier, monospace;
+        }
+        .error{
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+       <div>
+            <label>Wpisz kolor czewony: </label>
+            <input type="number" name="R" placeholder="R">
+        </div>
+            <span class="error"></span>
+        <div>
+            <label>Wpisz kolor zielony: </label>
+            <input type="number" name="G" placeholder="G">
+        </div>
+            <span class="error"></span>
+        <div>
+            <label>Wpisz kolor niebieski: </label>
+            <input type="number" name="B" placeholder="B">
+       </div>
+            <span class="error"></span>
+       <br>
+       <button type="submit">Zmień kolor tła</button>
+    </form>
+
+    <script>
+        const form = document.querySelector('form');
+        const error = document.querySelectorAll('span.error');
+
+        const R = document.querySelector('input[name="R"]');
+        const G = document.querySelector('input[name="G"]');
+        const B = document.querySelector('input[name="B"]');
+
+        const errorMsg = "Wpisana liczba musi być w przedziale 0-255";
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            const rValue = R.value;
+            const gValue = G.value;
+            const bValue = B.value;
+
+            error.forEach(error=>{
+                error.textContent = "";
+            });
+
+            if(rValue < 0 || rValue > 255){
+                error[0].textContent = errorMsg;
+                return false;
+            } 
+            if(gValue < 0 || gValue > 255){
+                error[1].textContent = errorMsg;
+                return false;
+            }
+            if(bValue < 0 || bValue > 255){
+                error[2].textContent = errorMsg;
+                return false;
+            }
+                
+            document.body.style.backgroundColor = `rgb(${rValue}, ${gValue}, ${bValue})`;
+
+        });
+
+    </script>
+</body>
+</html>
