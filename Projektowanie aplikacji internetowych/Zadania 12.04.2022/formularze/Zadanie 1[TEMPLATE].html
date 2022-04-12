@@ -61,15 +61,15 @@
                 error.textContent = "";
             });
 
-            if(rValue < 0 || rValue > 255){
+            if(rValue < 0 || rValue > 255 || rValue == ""){
                 error[0].textContent = errorMsg;
                 return false;
             } 
-            if(gValue < 0 || gValue > 255){
+            if(gValue < 0 || gValue > 255 || gValue == ""){
                 error[1].textContent = errorMsg;
                 return false;
             }
-            if(bValue < 0 || bValue > 255){
+            if(bValue < 0 || bValue > 255 || bValue == ""){
                 error[2].textContent = errorMsg;
                 return false;
             }
