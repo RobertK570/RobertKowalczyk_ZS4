@@ -53,9 +53,9 @@
 
         form.addEventListener('submit', function(e){
             e.preventDefault();
-            const rValue = R.value;
-            const gValue = G.value;
-            const bValue = B.value;
+            const rValue = parseInt(R.value);
+            const gValue = parseInt(G.value);
+            const bValue = parseInt(B.value);
 
             error.forEach(error=>{
                 error.textContent = "";
