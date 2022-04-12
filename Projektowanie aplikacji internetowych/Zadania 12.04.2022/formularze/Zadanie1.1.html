@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: space-between;
+            width: 20px;
+        }
+        button, div, input, span{
+            font-family:'Courier New', Courier, monospace;
+        }
+        .error{
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+        <div>
+            <label>A</label>
+            <input type="checkbox" name="box" value="A">
+        </div>
+        <div>
+            <label>B</label>
+            <input type="checkbox" name="box" value="B">
+        </div>
+        <div>
+            <label>C</label>
+            <input type="checkbox" name="box" value="C">
+        </div>
+        <div>
+            <label>D</label>
+            <input type="checkbox" name="box" value="D">
+        </div>
+        <div>
+            <label>E</label>
+            <input type="checkbox" name="box" value="E">
+        </div>
+       <button type="submit">Click</button>
+    </form>
+
+    <div id="out"></div>
+
+    <script>
+        const form = document.querySelector('form');
+        const out = document.querySelector('#out');
+       
+        const checkbox = document.querySelectorAll('input[name="box"]');
+
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            for(let i = 0; i < 5; i++) {
+                if(checkbox[i].checked == 1) {
+                    out.textContent += `${checkbox[i].value} `;
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
