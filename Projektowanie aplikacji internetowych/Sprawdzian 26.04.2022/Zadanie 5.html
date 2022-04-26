@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Robert Kowalczyk Zadanie 5-->
+    
+    <div id="content"></div>
+    <script>
+        const div = document.querySelector('#content');
+        const liczby = [];
+        let tmp = 0;
+        let najwyzsza = 0;
+
+        for(let i = 0; i < 100; i++) {
+            liczby[i] = Math.round(Math.random() * 100);
+            tmp += liczby[i];
+            if(liczby[i] > najwyzsza) {
+                najwyzsza = liczby[i];
+            }
+        }
+
+        srednia = tmp / 100;
+
+        div.innerHTML = `Wylosowane liczby = ${liczby} <br> Suma = ${tmp} <br> Srednia = ${srednia} <br> Max liczba = ${najwyzsza}`;
+
+    </script>
+</body>
+</html>
