@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <legend>
+            <input type="checkbox" name="check" id="" value="1">
+        1
+        </legend>
+        <legend>
+            <input type="checkbox" name="check" id="" value="2">
+        2
+        </legend>
+        <legend>
+            <input type="checkbox" name="check" id="" value="3">
+        3
+        </legend>
+        <legend>
+            <input type="checkbox" name="check" id="" value="4">
+        4
+        </legend>
+        <legend>
+            <input type="checkbox" name="check" id="" value="5">
+        5
+        </legend>
+
+        <button type="submit">Klik</button>
+    </form>
+
+    <div id="content"></div>
+
+
+    <script>
+        const btn = document.querySelector('button');
+        const div = document.querySelector('#content');
+
+        btn.addEventListener('click', function(e){
+            div.textContent = "";
+            e.preventDefault();
+            const check = document.querySelectorAll("input[name='check']");
+
+            for(let i = 0; i < 5; i++) {
+                if(check[i].checked) {
+                    div.textContent += check[i].value + ", ";
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

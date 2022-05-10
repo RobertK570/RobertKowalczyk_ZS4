@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <legend>KWADRAT</legend>
+        <input type="number" name="a" id="" placeholder="a">
+
+
+        <button type="submit" id="btn1">KLIK</button>
+    </form>
+
+    <form action="">
+        <legend>PROSTOKAT</legend>
+        <input type="number" name="a2" id="" placeholder="a">
+        <input type="number" name="b" id="" placeholder="b">
+
+
+        <button type="submit" id="btn2">KLIK</button>
+    </form>
+
+    <div id="content"></div>
+
+    <script>
+        const btn = document.querySelector('#btn1');
+        const btn2 = document.querySelector('#btn2');
+        const content = document.querySelector('#content');
+
+        btn.addEventListener('click', function(e){
+            e.preventDefault();
+            const a = document.querySelector("input[name='a']").value * 1;
+            let pole = a * a;
+            let obw = a * 4;
+
+            content.textContent = `Pole = ${pole} obw = ${obw}`;
+        });
+
+        
+        btn2.addEventListener('click', function(e){
+            e.preventDefault();
+            const a = document.querySelector("input[name='a2']").value * 1;
+            const b = document.querySelector("input[name='b']").value * 1;
+            let pole2 = a * b;
+            let obw2 = a + a + b + b;
+
+            content.textContent = `Pole = ${pole2} obw = ${obw2}`;
+        });
+    </script>
+</body>
+</html>
