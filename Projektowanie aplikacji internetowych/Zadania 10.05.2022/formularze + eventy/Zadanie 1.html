@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <input type="text" name="text2" id="">
+        <button type="submit">KLIK</button>
+    </form>
+    <div id="test"></div>
+
+
+    <script>
+       
+        const bttn = document.querySelector('button');
+        const div = document.querySelector('#test')
+
+        bttn.addEventListener('click', function(e){
+            e.preventDefault();
+            const text = document.querySelector('input[name="text2"]').value
+            div.textContent = text;
+        });
+
+
+    </script>
+</body>
+</html>
