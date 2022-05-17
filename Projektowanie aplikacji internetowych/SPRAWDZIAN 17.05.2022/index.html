@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        div{
+            border: 1px red solid;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="">
+        <legend>Podaj ilosc kul: 
+        <input type="number" name="ilosc"> </legend>
+
+        <legend>Podaj poczatkowa cyfre zakresu: 
+        <input type="number" name="poczatek" placeholder="Liczba poczatkowa">
+        </legend>
+
+        <legend>Podaj koncowa liczbe zakresu: 
+            <input type="number" name="kuniec" placeholder="Liczba koncowa">
+        </legend>
+
+        <button type="submit" id="los">LOSOWANIE</button>
+    </form>
+
+    <div id="out">LICZBY: </div>
+
+    <script src="script.js"></script>
+      
+    </script>
+</body>
+</html>
